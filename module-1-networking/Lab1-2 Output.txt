@@ -1,0 +1,220 @@
+C:\Users\Mohit Yadav>openssl s_client -connect 13.53.201.150:443
+Connecting to 13.53.201.150
+CONNECTED(000001A4)
+Can't use SSL_get_servername
+depth=0 C=IN, ST=Karnataka, L=Bangalore, O=InstaSafe Lab, CN=172.31.11.55
+verify error:num=18:self-signed certificate
+verify return:1
+depth=0 C=IN, ST=Karnataka, L=Bangalore, O=InstaSafe Lab, CN=172.31.11.55
+verify return:1
+---
+Certificate chain
+ 0 s:C=IN, ST=Karnataka, L=Bangalore, O=InstaSafe Lab, CN=172.31.11.55
+   i:C=IN, ST=Karnataka, L=Bangalore, O=InstaSafe Lab, CN=172.31.11.55
+   a:PKEY: RSA, 2048 (bit); sigalg: sha256WithRSAEncryption
+   v:NotBefore: Jul 19 09:45:58 2026 GMT; NotAfter: Jul 19 09:45:58 2027 GMT
+---
+Server certificate
+-----BEGIN CERTIFICATE-----
+MIIDqTCCApGgAwIBAgIUX+kPFgnP+ba6KQ5inEzWxuS4QVowDQYJKoZIhvcNAQEL
+BQAwZDELMAkGA1UEBhMCSU4xEjAQBgNVBAgMCUthcm5hdGFrYTESMBAGA1UEBwwJ
+QmFuZ2Fsb3JlMRYwFAYDVQQKDA1JbnN0YVNhZmUgTGFiMRUwEwYDVQQDDAwxNzIu
+MzEuMTEuNTUwHhcNMjYwNzE5MDk0NTU4WhcNMjcwNzE5MDk0NTU4WjBkMQswCQYD
+VQQGEwJJTjESMBAGA1UECAwJS2FybmF0YWthMRIwEAYDVQQHDAlCYW5nYWxvcmUx
+FjAUBgNVBAoMDUluc3RhU2FmZSBMYWIxFTATBgNVBAMMDDE3Mi4zMS4xMS41NTCC
+ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJVlqp6sNlzPhpD5W1WHM0bm
+zj95kQC4EgQVNABXAkjooeYu2cUkbwR7t6UkwPz50mD5DMEtYz1uLQvNmcpUsWwl
+eGTqdtY1icwqzp2jIQFb/+JAMSKdd6HmfzpTq4q3GuW53KaOTDBtK3HCGJtDSF7M
+fbUH8RO7FUdga171s1LM9eI9DHdbAkZ51hxK+x6f30AXIsERDC3QkuCqgGO3sX2f
+HpOno75ZncAH7k/Z9aejIkrN3kOw9KO3qrZRprfjIq7lQbdv2FFvGSmH/XdZb7Kr
+0XrbCAbTmLhKcsK1e94FZUnroo1TKfnZVBvq301NgxPB1zcgZhFzkfXizS6MI1sC
+AwEAAaNTMFEwHQYDVR0OBBYEFOvrFe/tWWFh5rbs48EgByOVYgGjMB8GA1UdIwQY
+MBaAFOvrFe/tWWFh5rbs48EgByOVYgGjMA8GA1UdEwEB/wQFMAMBAf8wDQYJKoZI
+hvcNAQELBQADggEBAF96z9r4bwJzpTvUP6iWTCLxR5Ws7b9dow2DIr1tCghcWGrM
+0xKIxk0ezSfJAiHd0Fqw/fft+t7L/JOdfx0HRUb/w9h14iEMRMPD2heRjfxLiAP2
+EF5VVAUggD+jzSnrcRZ2/N1bvvTfVP0yvth4Wy5tXXqgV2d3Ipdey0MkqwCzLpGO
+7LbCl4S+kSihHP2JXouSXKC5uUdLhFxHOkvIetRB9AFD8JcepxE1Ac0wXZwvMXeC
+5TQ74J10QOmugxf41wq5lpF8ZeWr/Yr5y8k8yQLZuk9ARQzqoc2R/UZ5WxWNaqZO
+YNf61/7R1T6Vx8Qp5+OR+gH4dGaQFk3KXQ7pLfY=
+-----END CERTIFICATE-----
+subject=C=IN, ST=Karnataka, L=Bangalore, O=InstaSafe Lab, CN=172.31.11.55
+issuer=C=IN, ST=Karnataka, L=Bangalore, O=InstaSafe Lab, CN=172.31.11.55
+---
+No client certificate CA names sent
+Peer signing digest: SHA256
+Peer signature type: rsa_pss_rsae_sha256
+Negotiated TLS1.3 group: X25519MLKEM768
+---
+SSL handshake has read 2585 bytes and written 1610 bytes
+Verification error: self-signed certificate
+---
+New, TLSv1.3, Cipher is TLS_AES_256_GCM_SHA384
+Protocol: TLSv1.3
+Server public key is 2048 bit
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 18 (self-signed certificate)
+---
+ECH: NOT CONFIGURED: -103
+---
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: 0DC6CDC948C7C20C583063506AFA46345DC2EE4FA164F2B7AF22963E58A4BE0D
+    Session-ID-ctx:
+    Resumption PSK: ACC3D36F432A6522B24E9807C95574460A32B8AC87CF11168576ECC39DB9E64BBD43770DF14A49B10E98786CF6D7197D
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 300 (seconds)
+    TLS session ticket:
+    0000 - 6a 14 d3 30 ea 5f 5a d4-8b 99 e3 49 47 63 cb f8   j..0._Z....IGc..
+    0010 - 5e fa 85 65 8d 81 58 97-eb 29 c4 a5 79 59 0e 1f   ^..e..X..)..yY..
+    0020 - 90 bd cf c2 97 e0 68 bd-02 6f f1 67 4d 28 54 1d   ......h..o.gM(T.
+    0030 - 8a 32 bc ec 74 f3 75 25-c0 5b 9b a8 0b e0 0c 7c   .2..t.u%.[.....|
+    0040 - 7e a6 3c 19 c7 22 e9 3f-1a 7b b7 66 19 c3 57 1c   ~.<..".?.{.f..W.
+    0050 - a5 b4 55 a9 aa c8 8a 25-7a f5 d4 e6 4a b2 b4 14   ..U....%z...J...
+    0060 - f0 ba 68 26 d4 c6 bb c3-60 98 97 6e 94 71 9b 86   ..h&....`..n.q..
+    0070 - 13 77 cf 2b db 90 97 f5-b9 f2 4c a3 1d 37 e2 07   .w.+......L..7..
+    0080 - 17 9d 9f 54 c2 c4 b5 51-19 8d d9 d7 03 d4 84 f4   ...T...Q........
+    0090 - 77 2b bf c4 8f f4 ca bd-1f 68 b4 59 39 b9 79 23   w+.......h.Y9.y#
+    00a0 - 56 57 03 84 70 8d 9f d6-61 4b fd db 53 94 d1 90   VW..p...aK..S...
+    00b0 - be 18 1d ee cb 8e b2 99-83 70 6a b6 61 d8 23 0b   .........pj.a.#.
+    00c0 - c4 8c 9e 9a ba 5a 89 5e-fc d3 b4 d2 ec c0 a8 b4   .....Z.^........
+    00d0 - 66 96 52 ca 37 13 35 35-3e d1 1c 1c fe c3 f4 7f   f.R.7.55>.......
+
+    Start Time: 1784455141
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self-signed certificate)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK
+---
+Post-Handshake New Session Ticket arrived:
+SSL-Session:
+    Protocol  : TLSv1.3
+    Cipher    : TLS_AES_256_GCM_SHA384
+    Session-ID: A551B407B78C16FB88386F548D38BA7D97FF840E63909A648D81246F8AA7472D
+    Session-ID-ctx:
+    Resumption PSK: 186C78D27D5138263B52DA71B521E7D86199719CCD1B2C0E5C077F48DCD536555D8D42FEF62D034EA995FCAF8C10672A
+    PSK identity: None
+    PSK identity hint: None
+    SRP username: None
+    TLS session ticket lifetime hint: 300 (seconds)
+    TLS session ticket:
+    0000 - 6a 14 d3 30 ea 5f 5a d4-8b 99 e3 49 47 63 cb f8   j..0._Z....IGc..
+    0010 - 7a 4c 88 97 ba be 98 b7-65 b7 f7 71 a1 a1 a7 7c   zL......e..q...|
+    0020 - 09 82 08 13 f5 24 b0 1a-b1 f9 5b 7e 5d 48 56 1a   .....$....[~]HV.
+    0030 - ab 3b f6 bc 0e 70 f5 f6-5c 38 c5 0f 03 c8 6f 7c   .;...p..\8....o|
+    0040 - 73 9e a5 30 48 04 92 70-1c 18 c4 50 59 6b 08 82   s..0H..p...PYk..
+    0050 - 65 19 5c 9d 84 a0 c6 3c-90 3d 22 f2 b8 5d 46 54   e.\....<.="..]FT
+    0060 - 9c 24 dc 9f 4e 35 c7 53-39 49 27 71 a0 7f cd b9   .$..N5.S9I'q....
+    0070 - cb 89 f4 f7 33 31 6a 78-6c 1f 98 a2 40 66 54 39   ....31jxl...@fT9
+    0080 - 1b 6a b1 e4 55 59 2d 47-e7 44 eb 90 30 9e 87 d0   .j..UY-G.D..0...
+    0090 - f9 f6 cc ce f2 8d 09 6c-d8 aa 81 52 ed a3 63 cf   .......l...R..c.
+    00a0 - c1 0f 84 22 93 3f 22 5a-3f 7e 0e 99 99 14 93 f9   ...".?"Z?~......
+    00b0 - 56 c0 c4 fd ba c7 64 f5-dd c1 95 01 38 70 ae ec   V.....d.....8p..
+    00c0 - 5a 5f 4e 99 21 d1 29 82-02 94 12 35 42 a4 7f 94   Z_N.!.)....5B...
+    00d0 - aa 78 ae 00 fa 2c f4 76-e4 bc 7f 65 fc 08 74 9e   .x...,.v...e..t.
+
+    Start Time: 1784455141
+    Timeout   : 7200 (sec)
+    Verify return code: 18 (self-signed certificate)
+    Extended master secret: no
+    Max Early Data: 0
+---
+read R BLOCK
+
+
+C:\Users\Mohit Yadav>openssl s_client -connect 13.53.201.150:443 | openssl x509 -noout -text
+Connecting to 13.53.201.150
+Can't use SSL_get_servername
+depth=0 C=IN, ST=Karnataka, L=Bangalore, O=InstaSafe Lab, CN=172.31.11.55
+verify error:num=18:self-signed certificate
+verify return:1
+depth=0 C=IN, ST=Karnataka, L=Bangalore, O=InstaSafe Lab, CN=172.31.11.55
+verify return:1
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            5f:e9:0f:16:09:cf:f9:b6:ba:29:0e:62:9c:4c:d6:c6:e4:b8:41:5a
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=IN, ST=Karnataka, L=Bangalore, O=InstaSafe Lab, CN=172.31.11.55
+        Validity
+            Not Before: Jul 19 09:45:58 2026 GMT
+            Not After : Jul 19 09:45:58 2027 GMT
+        Subject: C=IN, ST=Karnataka, L=Bangalore, O=InstaSafe Lab, CN=172.31.11.55
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    95:65:aa:9e:ac:36:5c:cf:86:90:f9:5b:55:87:33:46:
+                    e6:ce:3f:79:91:00:b8:12:04:15:34:00:57:02:48:e8:
+                    a1:e6:2e:d9:c5:24:6f:04:7b:b7:a5:24:c0:fc:f9:d2:
+                    60:f9:0c:c1:2d:63:3d:6e:2d:0b:cd:99:ca:54:b1:6c:
+                    25:78:64:ea:76:d6:35:89:cc:2a:ce:9d:a3:21:01:5b:
+                    ff:e2:40:31:22:9d:77:a1:e6:7f:3a:53:ab:8a:b7:1a:
+                    e5:b9:dc:a6:8e:4c:30:6d:2b:71:c2:18:9b:43:48:5e:
+                    cc:7d:b5:07:f1:13:bb:15:47:60:6b:5e:f5:b3:52:cc:
+                    f5:e2:3d:0c:77:5b:02:46:79:d6:1c:4a:fb:1e:9f:df:
+                    40:17:22:c1:11:0c:2d:d0:92:e0:aa:80:63:b7:b1:7d:
+                    9f:1e:93:a7:a3:be:59:9d:c0:07:ee:4f:d9:f5:a7:a3:
+                    22:4a:cd:de:43:b0:f4:a3:b7:aa:b6:51:a6:b7:e3:22:
+                    ae:e5:41:b7:6f:d8:51:6f:19:29:87:fd:77:59:6f:b2:
+                    ab:d1:7a:db:08:06:d3:98:b8:4a:72:c2:b5:7b:de:05:
+                    65:49:eb:a2:8d:53:29:f9:d9:54:1b:ea:df:4d:4d:83:
+                    13:c1:d7:37:20:66:11:73:91:f5:e2:cd:2e:8c:23:5b
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Subject Key Identifier:
+                EB:EB:15:EF:ED:59:61:61:E6:B6:EC:E3:C1:20:07:23:95:62:01:A3
+            X509v3 Authority Key Identifier:
+                EB:EB:15:EF:ED:59:61:61:E6:B6:EC:E3:C1:20:07:23:95:62:01:A3
+            X509v3 Basic Constraints: critical
+                CA:TRUE
+    Signature Algorithm: sha256WithRSAEncryption
+    Signature Value:
+        5f:7a:cf:da:f8:6f:02:73:a5:3b:d4:3f:a8:96:4c:22:f1:47:95:ac:ed:bf:5d:a3:
+        0d:83:22:bd:6d:0a:08:5c:58:6a:cc:d3:12:88:c6:4d:1e:cd:27:c9:02:21:dd:d0:
+        5a:b0:fd:f7:ed:fa:de:cb:fc:93:9d:7f:1d:07:45:46:ff:c3:d8:75:e2:21:0c:44:
+        c3:c3:da:17:91:8d:fc:4b:88:03:f6:10:5e:55:54:05:20:80:3f:a3:cd:29:eb:71:
+        16:76:fc:dd:5b:be:f4:df:54:fd:32:be:d8:78:5b:2e:6d:5d:7a:a0:57:67:77:22:
+        97:5e:cb:43:24:ab:00:b3:2e:91:8e:ec:b6:c2:97:84:be:91:28:a1:1c:fd:89:5e:
+        8b:92:5c:a0:b9:b9:47:4b:84:5c:47:3a:4b:c8:7a:d4:41:f4:01:43:f0:97:1e:a7:
+        11:35:01:cd:30:5d:9c:2f:31:77:82:e5:34:3b:e0:9d:74:40:e9:ae:83:17:f8:d7:
+        0a:b9:96:91:7c:65:e5:ab:fd:8a:f9:cb:c9:3c:c9:02:d9:ba:4f:40:45:0c:ea:a1:
+        cd:91:fd:46:79:5b:15:8d:6a:a6:4e:60:d7:fa:d7:fe:d1:d5:3e:95:c7:c4:29:e7:
+        e3:91:fa:01:f8:74:66:90:16:4d:ca:5d:0e:e9:2d:f6
+
+
+C:\Users\Mohit Yadav>openssl s_client -connect 13.53.201.150:443 -tls1_1
+Connecting to 13.53.201.150
+CONNECTED(00000188)
+C8080000:error:0A0000BF:SSL routines:tls_setup_handshake:no protocols available:ssl\statem\statem_lib.c:156:
+---
+no peer certificate available
+---
+No client certificate CA names sent
+Negotiated TLS1.3 group NID: 0
+---
+SSL handshake has read 0 bytes and written 7 bytes
+Verification: OK
+---
+New, (NONE), Cipher is (NONE)
+Protocol: TLSv1.3
+This TLS version forbids renegotiation.
+Compression: NONE
+Expansion: NONE
+No ALPN negotiated
+Early data was not sent
+Verify return code: 0 (ok)
+---
+ECH: NOT CONFIGURED: -103
+---
