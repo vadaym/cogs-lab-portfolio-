@@ -1,0 +1,113 @@
+Last login: Sun Jul 19 07:53:00 2026 from 157.49.117.44
+ubuntu@ip-172-31-4-148:~$ ping -c 5 8.8.8.8
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=118 time=3.28 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=118 time=3.31 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=118 time=3.37 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=118 time=3.31 ms
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=118 time=3.29 ms
+
+--- 8.8.8.8 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4006ms
+rtt min/avg/max/mdev = 3.283/3.313/3.365/0.028 ms
+ubuntu@ip-172-31-4-148:~$ ping -c 3 google.com
+PING google.com (216.58.201.206) 56(84) bytes of data.
+64 bytes from lcarnb-aj-in-f14.1e100.net (216.58.201.206): icmp_seq=1 ttl=119 time=3.16 ms
+64 bytes from lcarnb-aj-in-f14.1e100.net (216.58.201.206): icmp_seq=2 ttl=119 time=3.16 ms
+64 bytes from lcarnb-aj-in-f14.1e100.net (216.58.201.206): icmp_seq=3 ttl=119 time=3.21 ms
+
+--- google.com ping statistics ---
+3 packets transmitted, 3 received, 0% packet loss, time 2003ms
+rtt min/avg/max/mdev = 3.159/3.176/3.207/0.021 ms
+ubuntu@ip-172-31-4-148:~$ traceroute google.com
+traceroute to google.com (216.58.201.206), 30 hops max, 60 byte packets
+ 1  242.8.133.133 (242.8.133.133)  6.065 ms 242.8.132.129 (242.8.132.129)  4.347 ms 242.8.132.135 (242.8.132.135)  4.320 ms
+ 2  * * *
+ 3  173.194.124.194 (173.194.124.194)  4.343 ms  4.326 ms  4.306 ms
+ 4  192.178.44.87 (192.178.44.87)  4.062 ms  4.176 ms 142.250.236.117 (142.250.236.117)  4.629 ms
+ 5  209.85.246.57 (209.85.246.57)  5.961 ms 209.85.246.27 (209.85.246.27)  4.388 ms 209.85.246.57 (209.85.246.57)  5.949 ms
+ 6  lcarnb-aj-in-f14.1e100.net (216.58.201.206)  3.157 ms  3.174 ms  3.169 ms
+ubuntu@ip-172-31-4-148:~$ traceroute -T -p 443 google.com
+You do not have enough privileges to use this traceroute method.
+socket: Operation not permitted
+ubuntu@ip-172-31-4-148:~$ nslookup google.com
+Server:         127.0.0.53
+Address:        127.0.0.53#53
+
+Non-authoritative answer:
+Name:   google.com
+Address: 216.58.201.206
+Name:   google.com
+Address: 2a00:1450:400f:807::200e
+
+ubuntu@ip-172-31-4-148:~$ nslookup google.com 1.1.1.1
+Server:         1.1.1.1
+Address:        1.1.1.1#53
+
+Non-authoritative answer:
+Name:   google.com
+Address: 216.58.207.110
+Name:   google.com
+Address: 2a00:1450:400f:807::200e
+
+ubuntu@ip-172-31-4-148:~$ nmap -sV localhost
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-07-19 08:31 +0000
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.000069s latency).
+Other addresses for localhost (not scanned): ::1
+Not shown: 999 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 10.2p1 Ubuntu 2ubuntu3.2 (Ubuntu Linux; protocol 2.0)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.40 seconds
+ubuntu@ip-172-31-4-148:~$ curl -v https://www.google.com 2>&1 | head -40
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0* Host www.google.com:443 was resolved.
+* IPv6: 2001:4860:4828:7700::, 2001:4860:482a:7700::, 2001:4860:4827:7700::, 2001:4860:482c:7700::, 2001:4860:482b:7700::, 2001:4860:482d:7700::, 2001:4860:4829:7700::, 2001:4860:4826:7700::
+* IPv4: 142.251.153.119, 142.251.154.119, 142.251.150.119, 142.251.155.119, 142.251.156.119, 142.251.152.119, 142.251.157.119, 142.251.151.119
+*   Trying [2001:4860:4828:7700::]:443...
+* Immediate connect fail for 2001:4860:4828:7700::: Network is unreachable
+*   Trying 142.251.153.119:443...
+* ALPN: curl offers h2,http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [1569 bytes data]
+* SSL Trust Anchors:
+*   CAfile: /etc/ssl/certs/ca-certificates.crt
+*   CApath: /etc/ssl/certs
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [1210 bytes data]
+* TLSv1.3 (IN), TLS change cipher, Change cipher spec (1):
+{ [1 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [15 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [3814 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [79 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS change cipher, Change cipher spec (1):
+} [1 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Finished (20):
+} [52 bytes data]
+* SSL connection using TLSv1.3 / TLS_AES_256_GCM_SHA384 / X25519MLKEM768 / id-ecPublicKey
+* ALPN: server accepted h2
+* Server certificate:
+*   subject: CN=www.google.com
+*   start date: Jun 29 08:40:13 2026 GMT
+*   expire date: Sep 21 08:40:12 2026 GMT
+*   issuer: C=US; O=Google Trust Services; CN=WR2
+*   Certificate level 0: Public key type EC/prime256v1 (256/128 Bits/secBits), signed using sha256WithRSAEncryption
+ubuntu@ip-172-31-4-148:~$ openssl s_client -connect google.com:443 2>/dev/null | openssl x509 -noout -text | grep -E 'Subject|Issuer|Not After'
+        Issuer: C=US, O=Google Trust Services, CN=WR2
+            Not After : Sep 21 08:37:24 2026 GMT
+        Subject: CN=*.google.com
+        Subject Public Key Info:
+            X509v3 Subject Key Identifier:
+                CA Issuers - URI:http://i.pki.goog/wr2.crt
+            X509v3 Subject Alternative Name:
