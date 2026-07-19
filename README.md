@@ -1,5 +1,4 @@
-# cogs-lab-portfolio-
-For InstaSafe Lab Practices
+# cogs-lab-portfolio - For InstaSafe Lab Practices
 
 Name: Mohit Yadav
 
