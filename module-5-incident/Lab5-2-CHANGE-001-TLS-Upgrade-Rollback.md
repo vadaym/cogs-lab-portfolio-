@@ -1,20 +1,20 @@
-\# CHANGE-001 Rollback Record
+# CHANGE-001 Rollback Record
 
 
 
-\## Status
+## Status
 
 ROLLED BACK SUCCESSFULLY
 
 
 
-\## Rollback Trigger
+## Rollback Trigger
 
 Invalid Nginx configuration detected during validation.
 
 
 
-\## Failure Test
+## Failure Test
 
 
 
@@ -30,7 +30,7 @@ Result:
 
 
 
-unknown directive "ssl\_protocolz"
+unknown directive "ssl_protocolz"
 
 
 
@@ -38,7 +38,7 @@ Configuration test failed.
 
 
 
-\## Rollback Action
+## Rollback Action
 
 
 
@@ -50,7 +50,7 @@ sudo cp /etc/nginx/sites-available/lab-tls.backup /etc/nginx/sites-available/lab
 
 
 
-\## Validation
+## Validation
 
 
 
@@ -72,7 +72,7 @@ Test successful.
 
 
 
-\## Service Verification
+## Service Verification
 
 
 
@@ -92,7 +92,7 @@ HTTPS service restored successfully.
 
 
 
-\## Final Status
+## Final Status
 
 
 
